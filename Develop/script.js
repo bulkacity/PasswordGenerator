@@ -1,6 +1,7 @@
 // Assignment Code
 /* The Following will explain the steps of the code intention:
 
+this is a test
 Button the generate password on the page document.
   
 Prompts after click
@@ -27,7 +28,7 @@ function callPrompts
     returns minCharacters required as a string
 
 
-  
+   
     funtion: remainingCharacters()
     loops through the response input
     then creates a single array based on input by
