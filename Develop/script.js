@@ -84,21 +84,21 @@ function generatePassword(){
 }
 
 
-  var userInputLength = window.prompt("Choose a password length, Minumum of 8 and Maximum of 128");
+  var userInputLength = window.prompt("Choose a password length, Minumum of 8 and Maximum of 128.");
   var inputLength= parseInt(userInputLength)
 
   if (isNaN(inputLength)){
-    window.alert ("Please input a number, try again");
-    return;
+    window.alert ("Please input a number, try again.");
+    generatePassword();
   }
 
   if (inputLength <8 || inputLength > 128){
-    window.alert ("Password length must be greater than 8 and smaller than 128")
-    return;
+    window.alert ("Password length must be greater than 8 and smaller than 128.")
+    generatePassword();
   }
 
-var inputNumbersRequirement = window.confirm("Ok, Yes I want at least 1 number. Cancel, no I do not want numbers")
-var inputSpecialCharacters = window.confirm("Ok, I want at least 1 special characters, Cancel , I do not want special characters")
+var inputNumbersRequirement = window.confirm("Ok, Yes I want at least 1 number. Cancel, no I do not want numbers.")
+var inputSpecialCharacters = window.confirm("Ok, I want at least 1 special characters, Cancel , I do not want special characters.")
 var inputUpperCase = window.confirm("Ok, I want upper case. Cancel , I do not want upper case.")
 var inputLowerCase = window.confirm("Ok, i want lower case. Cancel, I do not want lower case.")
 // Write password to the #password input
@@ -158,6 +158,10 @@ console.log(remainingListLength)
     for (let i =0; i<lowerCaseList.length;i++){
       remainingList= remainingList.concat(lowerCaseList[i]);
     }
+  }
+  if(inputArray[1]===false && inputArray[2]===false && inputArray[3]===false && inputArray[4]===false){
+    window.alert ("You have to select at least (1) source of characters, please try again.");
+    generatePassword();
   }
 
 // the remianingList will be a string developed due to the selection
